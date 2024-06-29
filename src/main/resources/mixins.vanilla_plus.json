@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.jacketedrug021.vanilla_plus.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.vanilla_plus.refmap.json",
+  "mixins": [
+    "VillagerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

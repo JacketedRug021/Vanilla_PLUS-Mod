@@ -1,5 +1,6 @@
 package com.jacketedrug021.vanilla_plus.event;
 
+import net.minecraft.world.entity.npc.Villager;
 import com.mojang.logging.LogUtils;
 import net.minecraft.advancements.Advancement;
 import net.minecraft.advancements.AdvancementProgress;
@@ -28,10 +29,9 @@ import java.lang.module.ResolutionException;
 
 import static com.jacketedrug021.vanilla_plus.VanillaPlusMod.MOD_ID;
 
-
 public class ModEvents {
     private static final ResourceLocation ADVANCEMENT_ID = new ResourceLocation(MOD_ID, "story/repair_anvil");
-    public  static final TagKey<Item> ANVIL_REPAIR_ITEMS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID,"anvil_repair_items"));
+    //public  static final TagKey<Item> ANVIL_REPAIR_ITEMS = TagKey.create(Registries.ITEM, new ResourceLocation(MOD_ID,"anvil_repair_items"));
     public static final Logger LOGGER = LogUtils.getLogger();
     public static InteractionResult attemptAnvilRepair(Player player, Level level, InteractionHand hand, BlockHitResult hitResult) {
         if(!level.isClientSide && !player.isSpectator()) {
