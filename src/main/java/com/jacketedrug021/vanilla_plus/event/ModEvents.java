@@ -68,15 +68,12 @@ public class ModEvents {
         }
         return InteractionResult.PASS;
     }
-
     private  static boolean isChippedAnvil(BlockState state) {
         return state.is(Blocks.CHIPPED_ANVIL);
     }
-
     private  static boolean isDamagedAnvil(BlockState state) {
         return  state.is(Blocks.DAMAGED_ANVIL);
     }
-
     private  static boolean isRepairable(BlockState state) {
         return state.is(Blocks.CHIPPED_ANVIL) || state.is(Blocks.DAMAGED_ANVIL);
     }

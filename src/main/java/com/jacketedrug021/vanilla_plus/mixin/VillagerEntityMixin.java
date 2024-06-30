@@ -1,5 +1,6 @@
 package com.jacketedrug021.vanilla_plus.mixin;
 
+import com.jacketedrug021.vanilla_plus.config.ModConfig;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.entity.npc.Villager;
@@ -23,39 +24,35 @@ import java.util.Random;
 @Mixin(Villager.class)
 public class VillagerEntityMixin {
     @Shadow @Final private static Logger LOGGER;
-
     @Shadow private int villagerXp;
-
     @Inject(method = "tick", at = @At("HEAD"))
     public void onTick(CallbackInfo info) {
         Villager villager = (Villager) (Object) this;
 
-        // Ensure this runs on the server side only
+        // Making sure it runs on the server side only
         if (!villager.level().isClientSide && villager.level() instanceof ServerLevel) {
             long gameTime = villager.level().getGameTime();
 
-            // Reset trades every 200 ticks (10 seconds)
-            if (gameTime % 200L == 0) {
-                // Save the current experience and profession
+            // Get int value from the .Minecraft/config/vanilla_plus-common file.
+            long intervalDays = ModConfig.intervalDays;
+            if(gameTime % intervalDays == 0) {
+                // Save current experience and profession
                 int experience = villager.getVillagerXp();
                 VillagerProfession profession = villager.getVillagerData().getProfession();
                 int level = villager.getVillagerData().getLevel();
 
-                // Clear the current offers
+                // Clears the current offers.
                 villager.setOffers(new MerchantOffers());
 
-                // Restore the experience
+                // Restore any villager's experience, if they have any.
                 villager.setVillagerXp(experience);
 
-                // Randomize new offers based on the villager's profession and level
+                // New offers for any villagers randomized based on their level, if they have any.
                 addRandomTrades(villager, profession, level, villager.getRandom());
-
-                // Restock to refresh the trades
                 villager.restock();
             }
         }
     }
-
     private void addRandomTrades(Villager villager, VillagerProfession profession, int level, RandomSource randomSource) {
         Random random = new Random(randomSource.nextLong());
         for (int i = 1; i <= level; i++) {
