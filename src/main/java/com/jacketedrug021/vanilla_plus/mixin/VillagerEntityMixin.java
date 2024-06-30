@@ -8,10 +8,8 @@ import net.minecraft.world.entity.npc.VillagerProfession;
 import net.minecraft.world.entity.npc.VillagerTrades;
 import net.minecraft.world.item.trading.MerchantOffer;
 import net.minecraft.world.item.trading.MerchantOffers;
-import org.slf4j.Logger;
-import org.spongepowered.asm.mixin.Final;
 import org.spongepowered.asm.mixin.Mixin;
-import org.spongepowered.asm.mixin.Shadow;
+import org.spongepowered.asm.mixin.Unique;
 import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
@@ -23,8 +21,6 @@ import java.util.Random;
 
 @Mixin(Villager.class)
 public class VillagerEntityMixin {
-    @Shadow @Final private static Logger LOGGER;
-    @Shadow private int villagerXp;
     @Inject(method = "tick", at = @At("HEAD"))
     public void onTick(CallbackInfo info) {
         Villager villager = (Villager) (Object) this;
@@ -54,7 +50,8 @@ public class VillagerEntityMixin {
         }
     }
     private void addRandomTrades(Villager villager, VillagerProfession profession, int level, RandomSource randomSource) {
-        Random random = new Random(randomSource.nextLong());
+        Random random;
+        random = new Random(randomSource.nextLong());
         for (int i = 1; i <= level; i++) {
             VillagerTrades.ItemListing[] trades = VillagerTrades.TRADES.get(profession).get(i);
             if (trades != null && trades.length > 0) {
