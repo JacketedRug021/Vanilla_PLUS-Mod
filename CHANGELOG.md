@@ -2,7 +2,7 @@
 # Change Log
 All notable changes to this project will be documented in this file:
 
-## [v0.2-1.20.1]
+## [v0.3-1.20.1]
 ### Changes
 - Improved the villager trades reset code.
 - Change the config setting to accept long value inputs instead of just an integer. Now the trades will reset every 24000 ticks by default which it means a full in game day.
