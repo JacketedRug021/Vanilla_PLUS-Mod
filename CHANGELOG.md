@@ -1,6 +1,14 @@
 
 # Change Log
 All notable changes to this project will be documented in this file:
+## [v0.4-1.20.1]
+### Added
+- Add a new behaviour for armorer villagers to be able to repair wounded Iron Golems.
+
+### Changes
+- Changed mod descriptions
+- Code cleanUp in main class.
+- Structure the Config file code to be more readable.
 
 ## [v0.3-1.20.1]
 ### Changes
@@ -17,7 +25,7 @@ All notable changes to this project will be documented in this file:
 
 ### Changes
 - Minor changes in the project.
- 
+
 ## [v0.1-1.20.1]
 
 Initial Release of VanillaPlus mod for Minecraft v1.20.1, no plans for other version at the moment.
