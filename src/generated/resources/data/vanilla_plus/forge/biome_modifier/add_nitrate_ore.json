@@ -1,0 +1,6 @@
+{
+  "type": "forge:add_features",
+  "biomes": "#forge:is_dry/overworld",
+  "features": "vanilla_plus:nitrate_ore_placed",
+  "step": "underground_ores"
+}

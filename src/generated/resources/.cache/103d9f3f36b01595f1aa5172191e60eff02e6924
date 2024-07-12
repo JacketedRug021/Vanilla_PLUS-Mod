@@ -1,0 +1,4 @@
+// 1.20.1	2024-07-12T02:44:51.341706	Registries
+c52627797dbba984c3853612f23af54abc757c22 data/vanilla_plus/forge/biome_modifier/add_nitrate_ore.json
+fa91b126de041efdc1fff8ca66413efc22df4494 data/vanilla_plus/worldgen/configured_feature/nitrate_ore.json
+fdf8e1981fe0eba168e0c7fa766413f7e18a6876 data/vanilla_plus/worldgen/placed_feature/nitrate_ore_placed.json
