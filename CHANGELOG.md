@@ -1,6 +1,15 @@
 
 # Change Log
 All notable changes to this project will be documented in this file:
+## [v0.5-1.20.1]
+### Added
+- Introduced Nitrate Ore, which spawns between Y-levels 5 to 64 in Deserts, Badlands, and Mountains.
+- Added crafting recipe for new Nitrate Powder to create gunpowder an upgraded version of bone meal.
+
+### Changes
+- Removed Anvil repairs feature altogether due to redundancy from other mods. Recommend to use Easy Anvils mod.
+- Optimize villager reset trades function code.
+
 ## [v0.4-1.20.1]
 ### Added
 - Add a new behaviour for armorer villagers to be able to repair wounded Iron Golems.

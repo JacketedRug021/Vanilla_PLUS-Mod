@@ -1,6 +1,6 @@
 package com.jacketedrug021.vanilla_plus.entity.ai;
 
-import com.jacketedrug021.vanilla_plus.config.ModConfig;
+import com.jacketedrug021.vanilla_plus.util.config.ModConfig;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvents;
@@ -19,7 +19,7 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
-import static com.jacketedrug021.vanilla_plus.config.ModConfig.sightRange;
+import static com.jacketedrug021.vanilla_plus.util.config.ModConfig.sightRange;
 
 public class HealGolemGoal extends Goal {
     private static final Set<IronGolem> TARGETED_GOLEMS = Collections.synchronizedSet(new HashSet<>());
