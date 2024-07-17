@@ -68,7 +68,7 @@ public class ModConfig {
         CROPRADIUS = BUILDER
                 .comment("Range the growth of the crops are when using Advanced bone meal. (3 blocks radius by default)")
                 .defineInRange("cropRadius", 3, 1, Integer.MAX_VALUE);
-        BUILDER.pop();
+    BUILDER.pop();
 
         // Build the configuration specification
         SPEC = BUILDER.build();

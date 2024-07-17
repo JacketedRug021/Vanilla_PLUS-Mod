@@ -1,7 +1,7 @@
 package com.jacketedrug021.vanilla_plus;
 
+import com.jacketedrug021.vanilla_plus.entity.villager.goal.RepairGolemGoal;
 import com.jacketedrug021.vanilla_plus.util.config.ModConfig;
-import com.jacketedrug021.vanilla_plus.entity.ai.HealGolemGoal;
 import com.jacketedrug021.vanilla_plus.event.AdvBoneMealEvent;
 import com.jacketedrug021.vanilla_plus.util.registry.ModBlocks;
 import com.jacketedrug021.vanilla_plus.util.registry.ModItems;
@@ -90,7 +90,7 @@ public class VanillaPlusMod {
     public void onEntityJoinLevel(EntityJoinLevelEvent event){
         Entity entity = event.getEntity();
         if(entity instanceof Villager villager) {
-            villager.goalSelector.addGoal(1, new HealGolemGoal(villager));
+            villager.goalSelector.addGoal(1, new RepairGolemGoal(villager));
         }
     }
 }

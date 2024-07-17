@@ -1,4 +1,6 @@
 {
-  "advancements.vanilla_plus.repair.title": "Who Repairs the Repairer?",
-  "advancements.vanilla_plus.repair.description": "Repair a damaged anvil"
+	"block.vanilla_plus.nitrate_ore": "Nitrate Ore",
+
+	"item.vanilla_plus.nitrate_powder": "Nitrate Powder",
+	"item.vanilla_plus.adv_bone_meal": "Advance Bone Meal"
 }

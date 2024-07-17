@@ -1,6 +1,16 @@
 
 # Change Log
 All notable changes to this project will be documented in this file:
+## [v0.6-1.20.1]
+## Added
+- Add a small detail when a villager is heading to repair the Iron Golem.
+
+## Changes
+- Optimized code for the Villager repair Iron Golem goal.
+
+## Fixed
+- Fix missing textures of nitrate ore and nitrate powder.
+
 ## [v0.5-1.20.1]
 ### Added
 - Introduced Nitrate Ore, which spawns between Y-levels 5 to 64 in Deserts, Badlands, and Mountains.
